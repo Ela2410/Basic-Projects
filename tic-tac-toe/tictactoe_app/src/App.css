@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  margin: 0;
+}
+
+.game {
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 350px; /* Fixed width to keep the grid centered */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 75px); /* Each square is 75px wide */
+  grid-template-rows: repeat(3, 75px);   /* Each square is 75px tall */
+  gap: 10px;                             /* Space between squares */
+  justify-items: center;                 /* Center the content inside each square */
+  align-items: center;                   /* Center the content inside each square */
+}
+
+.square {
+  width: 75px;
+  height: 75px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background-color: #f7f7f7;
+  border: 2px solid #ccc;
+  border-radius: 20px; /* Border radius of 20px for rounded corners */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.square:hover {
+  background-color: #e6e6e6;
+  transform: scale(1.1);
+}
+
+.square.x {
+  color: #ff6347; /* Tomato color for X */
+}
+
+.square.o {
+  color: #3b9f94; /* Sea Green color for O */
+}
+
+.status {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.reset-button {
+  margin-top: 40px;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.reset-button:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+.reset-button:focus {
+  outline: none;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .game {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .board {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  .square {
+    font-size: 2.5rem;
+    padding: 20px;
+  }
+
+  .status {
+    font-size: 1.1rem;
+  }
+
+  .reset-button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 1.3rem;
+  }
+}
+
+/* For Very Small Screens (Mobile Phones in Portrait Mode) */
+@media (max-width: 480px) {
+  .board {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+  }
+
+  .square {
+    font-size: 2rem;
+    padding: 15px;
+  }
+
+  .status {
+    font-size: 1rem;
+  }
+
+  .reset-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
