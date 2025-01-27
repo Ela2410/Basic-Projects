@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;  /* Lighter background for a friendlier feel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #ffffff;  /* Clean white background */
+  padding: 30px;
+  border-radius: 10px;  /* Rounded corners for a softer design */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
+  width: 320px;
+  text-align: center;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.input-group {
+  margin: 15px 0;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #45a049;  /* Slight darken effect for hover */
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  border-top: 2px solid #eee;
+  padding-top: 10px;
+  margin-top: 20px;
+}
